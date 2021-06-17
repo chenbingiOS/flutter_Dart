@@ -13,11 +13,13 @@ const TextStyle kTitleTextStyle = TextStyle(
 
 // 内容文字样式
 const TextStyle kBodyTextStyle = TextStyle(
-    fontSize: kTitleTextSize, color: kTextColor, fontWeight: kMediumFontWeight);
+    fontSize: kBodyTextSize, color: kTextColor, fontWeight: kLightFontWeight);
 
 // 按钮文字样式
 const TextStyle kBtnTextStyle = TextStyle(
-    fontSize: kTitleTextSize, color: kTextColor, fontWeight: kMediumFontWeight);
+    fontSize: kBtnTextSize,
+    color: kBtnColorStart,
+    fontWeight: kMediumFontWeight);
 
 // 输入框边框
 InputBorder kInputBorder = OutlineInputBorder(
