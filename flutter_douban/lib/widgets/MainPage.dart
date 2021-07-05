@@ -26,6 +26,29 @@ class _MainPageWidgetState extends State<MainPageWidget> {
 
   int _selectIndex = 0;
 
+  final itemNames = [
+    Item('首页', Icons.home),
+    Item('书影音', Icons.movie),
+    Item('小组', Icons.group),
+    Item('市集', Icons.receipt),
+    Item('我的', Icons.person)
+  ];
+  List<BottomNavigationBarItem> itemList;
+
+  @override
+  void initState() {
+    super.initState();
+    itemList = itemNames
+        .map((item) => BottomNavigationBarItem(
+            label: item.name,
+            icon: Icon(
+              item.icon,
+              color: kTabBarIconColor,
+            ),
+            activeIcon: Icon(item.icon)))
+        .toList();
+  }
+
   Widget getWidget(int index) {
     return Offstage(
       offstage: _selectIndex != index,
@@ -59,44 +82,14 @@ class _MainPageWidgetState extends State<MainPageWidget> {
             _selectIndex = index;
           });
         },
-        items: [
-          BottomNavigationBarItem(
-              label: "首页",
-              icon: Icon(
-                Icons.home,
-                color: kTabBarIconColor,
-              ),
-              activeIcon: Icon(Icons.home)),
-          BottomNavigationBarItem(
-              label: "书影音",
-              icon: Icon(
-                Icons.movie,
-                color: kTabBarIconColor,
-              ),
-              activeIcon: Icon(Icons.movie)),
-          BottomNavigationBarItem(
-              label: "小组",
-              icon: Icon(
-                Icons.group,
-                color: kTabBarIconColor,
-              ),
-              activeIcon: Icon(Icons.group)),
-          BottomNavigationBarItem(
-              label: "市集",
-              icon: Icon(
-                Icons.receipt,
-                color: kTabBarIconColor,
-              ),
-              activeIcon: Icon(Icons.receipt)),
-          BottomNavigationBarItem(
-              label: "我的",
-              icon: Icon(
-                Icons.person,
-                color: kTabBarIconColor,
-              ),
-              activeIcon: Icon(Icons.person))
-        ],
+        items: itemList,
       ),
     );
   }
+}
+
+class Item {
+  String name;
+  IconData icon;
+  Item(this.name, this.icon);
 }
