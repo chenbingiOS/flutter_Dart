@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/widgets/MainPage.dart';
+import 'package:flutter_douban/widgets/SubjectMarkImageWidget.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,12 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           // 解决弹出键盘时TabBar向上滚动
           resizeToAvoidBottomInset: false,
-          body: MainPageWidget(),
+          // body: MainPageWidget(),
+          body: SafeArea(
+            child: SubjectMarkImageWidget(
+                imgNetUrl:
+                    'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p457760035.webp'),
+          ),
         ));
   }
 }

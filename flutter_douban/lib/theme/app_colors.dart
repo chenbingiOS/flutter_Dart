@@ -30,3 +30,5 @@ const Color kBoxDecColor = Color.fromARGB(255, 237, 237, 237);
 const Color kCursorColor = Color.fromARGB(255, 237, 237, 237);
 
 const Color kIconColor = Color.fromARGB(255, 128, 128, 128);
+
+const Color kHintColor = Color.fromARGB(255, 191, 191, 191);

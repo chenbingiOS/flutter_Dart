@@ -24,10 +24,10 @@ class SearchTextFieldWidget extends StatelessWidget {
             contentPadding: EdgeInsets.only(top: 8.0),
             border: InputBorder.none,
             hintText: hintText,
-            hintStyle: TextStyle(fontSize: 20),
+            hintStyle: TextStyle(fontSize: 20, color: kHintColor),
             prefixIcon: Icon(
               Icons.search,
-              size: 29,
+              size: 25,
               color: kIconColor,
             )),
       ),
