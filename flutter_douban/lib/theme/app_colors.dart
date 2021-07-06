@@ -25,3 +25,8 @@ const Color kNaviFixedColor = Color.fromARGB(255, 0, 188, 96);
 
 const Color kSelColor = Color.fromARGB(255, 45, 45, 45);
 const Color kUnSelColor = Color.fromARGB(255, 117, 117, 117);
+
+const Color kBoxDecColor = Color.fromARGB(255, 237, 237, 237);
+const Color kCursorColor = Color.fromARGB(255, 237, 237, 237);
+
+const Color kIconColor = Color.fromARGB(255, 128, 128, 128);
