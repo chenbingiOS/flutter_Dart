@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: MainPageWidget());
+        home: Scaffold(
+          // 解决弹出键盘时TabBar向上滚动
+          resizeToAvoidBottomInset: false,
+          body: MainPageWidget(),
+        ));
   }
 }

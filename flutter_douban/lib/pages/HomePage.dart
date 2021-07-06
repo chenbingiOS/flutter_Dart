@@ -18,7 +18,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   var tabBar;
-
   List<Widget> getTabList() {
     return titleList
         .map((item) => Text("$item", style: TextStyle(fontSize: 18)))
@@ -28,7 +27,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    tabBar = FlutterTabBar();
+    tabBar = HomePageTabBar();
     tabList = getTabList();
     _tabController = TabController(length: tabList.length, vsync: this);
   }
@@ -72,15 +71,15 @@ Widget getNestedScrollView(Widget tabBar) {
       body: FlutterTabBarView(tabController: _tabController));
 }
 
-class FlutterTabBar extends StatefulWidget {
-  FlutterTabBar({Key key}) : super(key: key);
+class HomePageTabBar extends StatefulWidget {
+  HomePageTabBar({Key key}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
     return _FlutterTabBarState();
   }
 }
 
-class _FlutterTabBarState extends State<FlutterTabBar> {
+class _FlutterTabBarState extends State<HomePageTabBar> {
   Color selectColor, unselectedColor;
   TextStyle selectStyle, unselectStyle;
 

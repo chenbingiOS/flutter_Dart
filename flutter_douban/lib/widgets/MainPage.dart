@@ -4,7 +4,7 @@ import 'package:flutter_douban/pages/MoviePage.dart';
 import 'package:flutter_douban/pages/PersonPage.dart';
 import 'package:flutter_douban/pages/ShopPage.dart';
 import 'package:flutter_douban/theme/app_colors.dart';
-import 'package:flutter_douban/widgets/FlutterTabBar.dart';
+import 'package:flutter_douban/pages/HomePage.dart';
 
 class MainPageWidget extends StatefulWidget {
   MainPageWidget({Key key}) : super(key: key);
