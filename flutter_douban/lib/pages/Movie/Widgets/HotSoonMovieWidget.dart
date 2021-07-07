@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_douban/http/MovieBean.dart';
 import 'package:flutter_douban/theme/app_colors.dart';
 
+/// 影院热映，即将上映
 class HotSoonMovieWidget extends StatefulWidget {
   HotSoonMovieWidget({Key key}) : super(key: key);
+
+  void setMovieBeanList(List<MovieBean> list) {
+    print(list);
+  }
 
   @override
   State<StatefulWidget> createState() {

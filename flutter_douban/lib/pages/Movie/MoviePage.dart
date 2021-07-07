@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_douban/http/API.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/HotSoonMovieWidget.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/TitleWidget.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/ToDayPlayMovieWidget.dart';
@@ -12,15 +13,22 @@ class MoviePage extends StatefulWidget {
 
 class _MoviePageState extends State<MoviePage> {
   Widget toDayPlayMovieWidget;
+  HotSoonMovieWidget hotSoonMovieWidget;
+  var _api = API();
 
   @override
   void initState() {
     super.initState();
+    hotSoonMovieWidget = HotSoonMovieWidget();
     toDayPlayMovieWidget = ToDayPlayMovieWidget([
       'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p792776858.webp',
       'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1374786017.webp',
       'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p917846733.webp',
     ]);
+    _api.getIntheaters((movieBeanList) {
+      hotSoonMovieWidget.setMovieBeanList(movieBeanList);
+      print(movieBeanList);
+    });
   }
 
   @override
@@ -42,7 +50,7 @@ class _MoviePageState extends State<MoviePage> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 25.0),
-                child: HotSoonMovieWidget(),
+                child: hotSoonMovieWidget,
               ),
             ]))
           ],
