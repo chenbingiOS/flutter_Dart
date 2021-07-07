@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/pages/GroupPage.dart';
-import 'package:flutter_douban/pages/Movie/MoviePage.dart';
+import 'package:flutter_douban/pages/Movie/BookAudioVideoPage.dart';
 import 'package:flutter_douban/pages/PersonPage.dart';
 import 'package:flutter_douban/pages/ShopPage.dart';
 import 'package:flutter_douban/theme/app_colors.dart';
 import 'package:flutter_douban/pages/HomePage.dart';
 
-class MainPageWidget extends StatefulWidget {
-  MainPageWidget({Key key}) : super(key: key);
+class ContainerPageWidget extends StatefulWidget {
+  ContainerPageWidget({Key key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _MainPageWidgetState();
+    return _ContainerPageWidgetState();
   }
 }
 
-class _MainPageWidgetState extends State<MainPageWidget> {
+class _ContainerPageWidgetState extends State<ContainerPageWidget> {
   final List<Widget> pages = [
     HomePage(),
-    MoviePage(),
+    BookAudioVideoPage(),
     GroupPage(),
     ShopPage(),
     PersonPage()
