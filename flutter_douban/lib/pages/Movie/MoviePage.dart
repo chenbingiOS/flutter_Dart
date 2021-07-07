@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_douban/pages/Movie/Widgets/HotSoonMovieWidget.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/TitleWidget.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/ToDayPlayMovieWidget.dart';
 
@@ -10,12 +11,11 @@ class MoviePage extends StatefulWidget {
 }
 
 class _MoviePageState extends State<MoviePage> {
-  Widget titleWidget, toDayPlayMovieWidget;
+  Widget toDayPlayMovieWidget;
 
   @override
   void initState() {
     super.initState();
-    titleWidget = TitleWidget();
     toDayPlayMovieWidget = ToDayPlayMovieWidget([
       'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p792776858.webp',
       'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1374786017.webp',
@@ -34,11 +34,15 @@ class _MoviePageState extends State<MoviePage> {
                 delegate: SliverChildListDelegate([
               Padding(
                 padding: EdgeInsets.only(top: 10.0),
-                child: titleWidget,
+                child: TitleWidget(),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 22.0),
+                child: toDayPlayMovieWidget,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 25.0),
-                child: toDayPlayMovieWidget,
+                child: HotSoonMovieWidget(),
               ),
             ]))
           ],

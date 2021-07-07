@@ -88,7 +88,7 @@ class BookAudioVideoPageTabBar extends StatefulWidget {
 
 class _BookAudioVideoPageTabBarState extends State<BookAudioVideoPageTabBar> {
   Color selectColor, unselectedColor;
-  TextStyle selectStyle, unselectStyle;
+  TextStyle selectStyle, unselectedStyle;
 
   @override
   void initState() {
@@ -96,7 +96,7 @@ class _BookAudioVideoPageTabBarState extends State<BookAudioVideoPageTabBar> {
     selectColor = kSelColor;
     unselectedColor = kUnSelColor;
     selectStyle = TextStyle(fontSize: 18, color: selectColor);
-    unselectStyle = TextStyle(fontSize: 18, color: selectColor);
+    unselectedStyle = TextStyle(fontSize: 18, color: selectColor);
   }
 
   @override
@@ -134,7 +134,7 @@ class _BookAudioVideoPageTabBarState extends State<BookAudioVideoPageTabBar> {
       labelColor: selectColor,
       labelStyle: selectStyle,
       unselectedLabelColor: unselectedColor,
-      unselectedLabelStyle: unselectStyle,
+      unselectedLabelStyle: unselectedStyle,
       indicatorSize: TabBarIndicatorSize.label,
     );
   }
