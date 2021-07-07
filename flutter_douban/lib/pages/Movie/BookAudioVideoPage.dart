@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/theme/app_colors.dart';
-import 'package:flutter_douban/widgets/FlutterTabBarView.dart';
+import 'package:flutter_douban/pages/Movie/FlutterTabBarView.dart';
 import 'package:flutter_douban/widgets/SearchTextFieldWidget.dart';
 
 final titleList = ['电影', '电视', '综艺', '读书', '音乐', '同城'];
