@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/pages/GroupPage.dart';
-import 'package:flutter_douban/pages/MoviePage.dart';
+import 'package:flutter_douban/pages/Movie/MoviePage.dart';
 import 'package:flutter_douban/pages/PersonPage.dart';
 import 'package:flutter_douban/pages/ShopPage.dart';
 import 'package:flutter_douban/theme/app_colors.dart';

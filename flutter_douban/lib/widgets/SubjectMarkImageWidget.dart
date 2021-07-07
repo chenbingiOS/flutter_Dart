@@ -57,10 +57,13 @@ Widget getCacheImg(String imgNetUrl) {
   var defaultImg =
       Image.asset('assets/images/iuc_default_img_subject_movie.9.png');
   const millisecond = Duration(milliseconds: 80);
-  return CachedNetworkImage(
-    imageUrl: imgNetUrl,
-    placeholder: (context, url) => CircularProgressIndicator(),
-    fadeInDuration: millisecond,
-    fadeOutDuration: millisecond,
+  return ClipRRect(
+    child: CachedNetworkImage(
+      imageUrl: imgNetUrl,
+      placeholder: (context, url) => CircularProgressIndicator(),
+      fadeInDuration: millisecond,
+      fadeOutDuration: millisecond,
+    ),
+    borderRadius: BorderRadius.all(Radius.circular(10.0)),
   );
 }
