@@ -17,8 +17,8 @@ class ContainerPageWidget extends StatefulWidget {
 
 class _ContainerPageWidgetState extends State<ContainerPageWidget> {
   final List<Widget> pages = [
-    HomePage(),
     BookAudioVideoPage(),
+    HomePage(),
     GroupPage(),
     ShopPage(),
     PersonPage()
@@ -83,6 +83,7 @@ class _ContainerPageWidgetState extends State<ContainerPageWidget> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        items: itemList,
         iconSize: 24,
         currentIndex: _selectIndex,
         fixedColor: kNaviFixedColor,
@@ -92,7 +93,6 @@ class _ContainerPageWidgetState extends State<ContainerPageWidget> {
             _selectIndex = index;
           });
         },
-        items: itemList,
       ),
     );
   }

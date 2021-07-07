@@ -4,7 +4,14 @@ import 'package:flutter_douban/theme/app_colors.dart';
 import 'package:flutter_douban/pages/Movie/FlutterTabBarView.dart';
 import 'package:flutter_douban/pages/Movie/Widgets/SearchTextFieldWidget.dart';
 
-final titleList = ['电影', '电视', '综艺', '读书', '音乐', '同城'];
+final titleList = [
+  '电影',
+  '电视',
+  '综艺',
+  '读书',
+  '音乐',
+  '同城',
+];
 List<Widget> tabList;
 TabController _tabController;
 
@@ -100,6 +107,25 @@ class _BookAudioVideoPageTabBarState extends State<BookAudioVideoPageTabBar> {
 
   @override
   Widget build(BuildContext context) {
+    //Tab小部件列表
+//    List<Widget>  @required this.tabs,
+    //组件选中以及动画的状态
+//   TabController this.controller,
+    //Tab是否可滑动(false->整个tab会把宽度填满，true-> tab包裹)
+//  bool  this.isScrollable = false,
+    //选项卡下方的导航条的颜色
+//   Color this.indicatorColor,
+    //选项卡下方的导航条的线条粗细
+//   double this.indicatorWeight = 2.0,
+//  EdgeInsetsGeometry  this.indicatorPadding = EdgeInsets.zero,
+//   Decoration this.indicator,
+//   TabBarIndicatorSize this.indicatorSize,导航条的长度，（tab：默认等分；label：跟标签长度一致）
+//  Color  this.labelColor,所选标签标签的颜色
+//  TextStyle  this.labelStyle,所选标签标签的文本样式
+//  EdgeInsetsGeometry  this.labelPadding,,所选标签标签的内边距
+// Color   this.unselectedLabelColor,未选定标签标签的颜色
+//  TextStyle  this.unselectedLabelStyle,未选中标签标签的文字样式
+//   void Function(T value) this.onTap,按下时的响应事件
     return TabBar(
       tabs: tabList,
       isScrollable: true,
