@@ -59,8 +59,8 @@ class _TextImgWidget extends StatelessWidget {
       },
       child: Column(
         children: <Widget>[
-          Image.asset(imgAsset, width: 55, height: 55),
-          Text(text, style: TextStyle(fontSize: 16, color: kIconColor))
+          Image.asset(imgAsset, width: 45, height: 45),
+          Text(text, style: TextStyle(fontSize: 13, color: kIconColor))
         ],
       ),
     );

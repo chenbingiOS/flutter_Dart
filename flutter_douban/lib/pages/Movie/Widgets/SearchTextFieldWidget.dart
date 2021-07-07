@@ -13,18 +13,18 @@ class SearchTextFieldWidget extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
-      height: 40.0,
+      height: 37.0,
       decoration: BoxDecoration(
           color: kBoxDecColor, borderRadius: BorderRadius.circular(24.0)),
       child: TextFormField(
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(fontSize: 17),
         onFieldSubmitted: onSubmitted,
         cursorColor: kCursorColor,
         decoration: InputDecoration(
             contentPadding: EdgeInsets.only(top: 8.0),
             border: InputBorder.none,
             hintText: hintText,
-            hintStyle: TextStyle(fontSize: 20, color: kHintColor),
+            hintStyle: TextStyle(fontSize: 17, color: kHintColor),
             prefixIcon: Icon(
               Icons.search,
               size: 25,

@@ -24,27 +24,29 @@ class LaminatedImage extends StatelessWidget {
                 left: w * 0.78,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6.0),
-                  child: Image.network(
-                    urls[2],
-                    width: w,
-                    height: h - dif - dif / 2,
-                    fit: BoxFit.cover,
-                    color: kBgColor,
-                    colorBlendMode: BlendMode.screen,
-                  ),
+                  child: getCacheImg(urls[2]),
+                  // child: Image.network(
+                  //   urls[2],
+                  //   width: w,
+                  //   height: h - dif - dif / 2,
+                  //   fit: BoxFit.cover,
+                  //   color: kBgColor,
+                  //   colorBlendMode: BlendMode.screen,
+                  // ),
                 )),
             Positioned(
                 left: secondLeftPadding,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6.0),
-                  child: Image.network(
-                    urls[1],
-                    width: w,
-                    height: h - dif,
-                    fit: BoxFit.cover,
-                    color: kBgColor,
-                    colorBlendMode: BlendMode.screen,
-                  ),
+                  child: getCacheImg(urls[1]),
+                  // child: Image.network(
+                  //   urls[1],
+                  //   width: w,
+                  //   height: h - dif,
+                  //   fit: BoxFit.cover,
+                  //   color: kBgColor,
+                  //   colorBlendMode: BlendMode.screen,
+                  // ),
                 )),
             Positioned(
                 left: 0,

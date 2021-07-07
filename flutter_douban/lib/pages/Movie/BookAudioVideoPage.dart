@@ -2,7 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/theme/app_colors.dart';
 import 'package:flutter_douban/pages/Movie/FlutterTabBarView.dart';
-import 'package:flutter_douban/widgets/SearchTextFieldWidget.dart';
+import 'package:flutter_douban/pages/Movie/Widgets/SearchTextFieldWidget.dart';
 
 final titleList = ['电影', '电视', '综艺', '读书', '音乐', '同城'];
 List<Widget> tabList;
@@ -20,7 +20,7 @@ class _BookAudioVideoPageState extends State<BookAudioVideoPage>
   var tabBar;
   List<Widget> getTabList() {
     return titleList
-        .map((item) => Text("$item", style: TextStyle(fontSize: 18)))
+        .map((item) => Text("$item", style: TextStyle(fontSize: 15)))
         .toList();
   }
 

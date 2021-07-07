@@ -15,25 +15,24 @@ class ToDayPlayMovieWidget extends StatelessWidget {
         decoration: BoxDecoration(
             color: kDecColor,
             shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            borderRadius: BorderRadius.all(Radius.circular(4.0))),
       ),
       Container(
           height: 140,
           margin: EdgeInsets.only(left: 13.0, bottom: 14.0),
           child: Row(
-            children: [
+            children: <Widget>[
               Stack(
-                children: [
-                  LaminatedImage(
-                    urls: urls,
-                    w: 90.0,
-                  ),
+                alignment: Alignment.centerLeft,
+                children: <Widget>[
+                  LaminatedImage(urls: urls, w: 90.0),
                   Positioned(
+                      left: 90.0 / 3,
                       child: Image.asset(
-                    "assets/images/ic_action_playable_video_s.png",
-                    width: 20.0,
-                    height: 20.0,
-                  ))
+                        "assets/images/ic_action_playable_video_s.png",
+                        width: 30.0,
+                        height: 30.0,
+                      ))
                 ],
               ),
               Expanded(
@@ -47,9 +46,12 @@ class ToDayPlayMovieWidget extends StatelessWidget {
                       '今日可播放电影已更新',
                       style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
-                    Text(
-                      '全部 30 >',
-                      style: TextStyle(fontSize: 13, color: Colors.white),
+                    Padding(
+                      padding: EdgeInsets.only(top: 6.0),
+                      child: Text(
+                        '全部 30 >',
+                        style: TextStyle(fontSize: 13, color: Colors.white),
+                      ),
                     )
                   ],
                 ),
