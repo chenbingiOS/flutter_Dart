@@ -25,9 +25,12 @@ class _MoviePageState extends State<MoviePage> {
       'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1374786017.webp',
       'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p917846733.webp',
     ]);
-    _api.getIntheaters((movieBeanList) {
-      hotSoonMovieWidget.setMovieBeanList(movieBeanList);
-      print(movieBeanList);
+    // _api.getIntheaters((movieBeanList) {
+    //   hotSoonMovieWidget.setMovieBeanList(movieBeanList);
+    //   print(movieBeanList);
+    // });
+    _api.getCommingSoon((value) {
+      print(value);
     });
   }
 

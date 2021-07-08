@@ -3,12 +3,12 @@ class MovieBean {
   var genres;
   var title;
   var casts;
-  var collectCount;
-  var originalTitle;
+  var collect_count;
+  var original_title;
   var subtype;
   var directors;
   var year;
-  var images;
+  Images images;
   var alt;
   var id;
 
@@ -17,13 +17,22 @@ class MovieBean {
     genres = map['genres'];
     title = map['title'];
     casts = map['casts'];
-    collectCount = map['collect_count'];
-    originalTitle = map['original_title'];
+    collect_count = map['collect_count'];
+    original_title = map['original_title'];
     subtype = map['subtype'];
     directors = map['directors'];
     year = map['year'];
-    images = map['images'];
+    var img = map['images'];
+    images = Images(img['small'], img['large'], img['medium']);
     alt = map['alt'];
     id = map['id'];
   }
+}
+
+class Images {
+  var small;
+  var large;
+  var medium;
+
+  Images(this.small, this.large, this.medium);
 }
